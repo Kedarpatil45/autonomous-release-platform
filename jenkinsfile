@@ -2,15 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+
+        stage('Checkout') {
             steps {
-                echo 'Autonomous Release Platform Pipeline Started'
+                echo 'Source Code Checkout'
             }
         }
 
-        stage('Git Check') {
+        stage('Build') {
             steps {
-                sh 'git --version'
+                echo 'Building Application'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Tests'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application'
             }
         }
     }
