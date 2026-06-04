@@ -23,3 +23,10 @@ stages {
 }
 
 }
+
+stage('Application Verification') {
+steps {
+sh 'ls -la'
+sh 'cat Dockerfile'
+}
+}
