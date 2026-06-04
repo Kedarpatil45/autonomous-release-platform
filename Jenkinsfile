@@ -20,13 +20,13 @@ stages {
             echo 'Pipeline Successful'
         }
     }
+
+    stage('Application Verification') {
+        steps {
+            sh 'ls -la'
+            sh 'cat Dockerfile'
+        }
+    }
 }
 
-}
-
-stage('Application Verification') {
-steps {
-sh 'ls -la'
-sh 'cat Dockerfile'
-}
 }
